@@ -7,14 +7,14 @@ using namespace std;
 
 void checkSum(int a[], int n, int t){
     bool table[n+1][t+1];
-    for(int j=1;j<=t;j++){
+    for(int j=0;j<=t;j++){//array indexing bug
         table[0][j] = false;
     }
     for(int i=0;i<=n;i++){
         table[i][0] = true;
     }
 
-    for(int i=1;i<=n;i++){
+    for(int i=1;i<n;i++){//bug
         for(int j=1;j<=t;j++){
             if(j < a[i-1]){
                 table[i][j] = table[i-1][j];
