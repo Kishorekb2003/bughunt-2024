@@ -12,7 +12,7 @@ private:
     struct node *tail;
 public:
     CLL(){
-        this->tail=NULL;    //constructor to initialize the tail pointer
+        this->tail=nullptr;    //constructor to initialize the tail pointer //modified to nullptr as NULL is for C
     }
     void insert(int,bool);
     void deletenode();    //member function
